@@ -1,0 +1,148 @@
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #121212; /* Fundo escuro */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* Mantém o scroll vertical da página */
+}
+
+.navbar {
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.category-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e50914;
+    margin-bottom: 10px;
+}
+
+.scroll-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.scrolling-wrapper {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+}
+
+.scrolling-wrapper::-webkit-scrollbar { 
+    display: none; /* Chrome/Safari */
+}
+
+/* Estilo dos botões de rolagem */
+.scroll-button {
+    background-color: #e50914;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Ajusta a posição dos botões para perto das bordas */
+.scroll-button.prev {
+    left: -20px; /* Ajuste a distância conforme necessário */
+}
+
+.scroll-button.next {
+    right: -20px; /* Ajuste a distância conforme necessário */
+}
+
+.scroll-button:hover {
+    background-color: #f61c24;
+}
+
+.scroll-button img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Configuração dos cards */
+.movie-card {
+    background-color: #1c1c1c;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    min-width: 200px;
+    max-width: 200px;
+    height: 350px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.movie-card:hover {
+    background-color: #292929;
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+}
+
+.movie-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #e50914;
+    margin: 10px 0 5px;
+    text-align: center;
+}
+
+.movie-description {
+    font-size: 0.8rem;
+    color: #cccccc;
+    text-align: center;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.btn-watch {
+    background-color: #e50914;
+    color: #ffffff;
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 0.9rem;
+    text-align: center;
+    display: block;
+    margin: 0 auto 10px;
+    width: 80%;
+}
+
+.btn-watch:hover {
+    background-color: #f61c24;
+}

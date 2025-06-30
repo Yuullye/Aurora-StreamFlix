@@ -1,0 +1,153 @@
+/* Importando a fonte Orbitron */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+/* Global styles */
+body {
+    font-family: 'Orbitron', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    background: url(./imagens/luffy.png) no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Content Cards */
+.card {
+    background-color: #1c1c1c;
+    border: none;
+}
+
+.card-title {
+    font-size: 1.25rem;
+}
+
+.card-text {
+    color: #ccc;
+}
+
+.card a.btn {
+    background-color: #e50914;
+    border: none;
+}
+
+/* Config Button and Menu Styles */
+.config-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #1c1c1c;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-item.d-flex {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px; /* Espaçamento entre os botões */
+}
+
+.button2, .config-button {
+    margin: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.config-button:hover {
+    background-color: #333333;
+    transform: rotate(90deg);
+}
+
+/* Menu de configurações */
+.config-menu {
+    display: none; /* Ocultado por padrão */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #1c1c1c;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    list-style: none;
+    z-index: 13;
+}
+
+.config-menu.show {
+    display: block; /* Exibe o menu quando a classe "show" é adicionada */
+}
+
+.config-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.config-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e50914;
+}
+
+/* Tela de carregamento */
+/* Tela de carregamento */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* Spinner de carregamento */
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #e50914;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Animação de rotação */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Ocultar a tela de carregamento após o carregamento da página */
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-out;
+}
